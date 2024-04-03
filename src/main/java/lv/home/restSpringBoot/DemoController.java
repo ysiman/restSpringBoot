@@ -1,6 +1,8 @@
 package lv.home.restSpringBoot;
 
 import lv.home.restSpringBoot.exception.DemoException;
+import lv.home.restSpringBoot.exception.DemoException2;
+import lv.home.restSpringBoot.exception.DemoException3;
 import lv.home.restSpringBoot.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -41,6 +43,16 @@ public class DemoController {
     @RequestMapping("/demoex")
     public String demoEx(){
         throw new DemoException("#DemoError");
+    }
+
+    @RequestMapping("/demoex2")
+    public String demoEx2(){
+        throw new DemoException2("#DemoError2");
+    }
+
+    @RequestMapping("/demoex3")
+    public String demoEx3(){
+        throw new DemoException3("#DemoError2");
     }
 
 
